@@ -11,6 +11,7 @@ private:
     std::string _suite;
     int _value;
 public:
+    Card() = default;
     Card(int value, std::string suite);
     [[nodiscard]] int getValue() const;
     [[nodiscard]] std::string getSuite() const;
