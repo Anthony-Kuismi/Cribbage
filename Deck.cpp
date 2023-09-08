@@ -3,7 +3,6 @@
 //
 
 #include "Deck.h"
-
 #include <random>
 
 void Deck::shuffle() {
@@ -13,12 +12,12 @@ void Deck::shuffle() {
 void Deck::deal(std::array<Card,6> *playerHand, std::array<Card,6> *compHand) {
     for(int i = 0; i < 6; i++){
         playerHand->at(i) = _cards.at(i*2);
-        playerHand->at(i) = _cards.at(i*2+1);
+        compHand->at(i) = _cards.at(i*2+1);
     }
 }
 
 Card Deck::cut() {
-    return Card(0,0);
+    return _cards.at(12);
 }
 
 Deck::Deck(){

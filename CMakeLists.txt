@@ -3,4 +3,4 @@ project(Cribbage)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Cribbage main.cpp Card.cpp Deck.cpp)
+add_executable(Cribbage main.cpp Card.cpp Deck.cpp Game.cpp)

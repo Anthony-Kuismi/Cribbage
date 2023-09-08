@@ -4,15 +4,16 @@
 
 #ifndef CRIBBAGE_CARD_H
 #define CRIBBAGE_CARD_H
-#include <string>
+#include <iostream>
 
 class Card {
 private:
-    std::string _suite;
     int _value;
+    std::string _suite;
 public:
     Card() = default;
     Card(int value, std::string suite);
+    [[nodiscard]] std::string toString() const;
     [[nodiscard]] int getValue() const;
     [[nodiscard]] std::string getSuite() const;
 };
